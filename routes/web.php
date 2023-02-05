@@ -17,7 +17,7 @@ Route::get('/', function () {
 
     $posts[] = \Spatie\YamlFrontMatter\YamlFrontMatter::parseFile(resource_path('posts/my-first-post.html'));
 
-    //return view('posts');
+    return view('posts',['posts' => $posts]);
 });
 
 Route::get('post',function () {
